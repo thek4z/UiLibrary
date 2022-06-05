@@ -284,15 +284,17 @@ end
     RankColor.TextWrapped = true
     RankColor.TextXAlignment = Enum.TextXAlignment.Left
     
-    if UserId == "123" then
-        RankColor.Text = "UI Developer"    
-    end
-    if UserId == "124" then
-    RankColor.Text = "Script User"
-    end
-    if userId == OwnerId then
-    RankColor.Text = "Script Owner"
-    end
+    for i,v in pairs(game.Players:GetPlayers()) do
+   if v.UserId == 1999781122 then
+       game.Players.LocalPlayer.PlayerGui.JJPremium.MainFrame.allPages.pagesFolder.newPage.Rank.RankColor.Text = "UI Developer"
+   end
+end
+
+for i,v in pairs(game.Players:GetPlayers()) do
+   if v.UserId == OwnerId then
+       game.Players.LocalPlayer.PlayerGui.JJPremium.MainFrame.allPages.pagesFolder.newPage.Rank.RankColor.Text = "Script Owner"
+   end
+end
     
     DscServer.Name = "DscServer"
     DscServer.Parent = Rank
